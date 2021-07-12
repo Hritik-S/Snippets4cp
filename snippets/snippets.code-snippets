@@ -4,5 +4,11 @@
         "body":[
             
         ]
-    }
+    },
+    "Check if a number if power of 3 or not":{
+        "prefix":"powerof3",
+        "body":[
+            
+        ]
+    },
 }
