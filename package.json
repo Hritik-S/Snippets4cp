@@ -1,0 +1,24 @@
+{
+    "name": "snippets4cp",
+    "displayName": "Snippets4cp",
+    "description": "C++ Snippets",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.58.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "c++",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "cpp",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}

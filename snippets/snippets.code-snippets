@@ -1,0 +1,8 @@
+{
+    "Check if a number if power of 2 or not":{
+        "prefix":"powerof2",
+        "body":[
+            
+        ]
+    }
+}
