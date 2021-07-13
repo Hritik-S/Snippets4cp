@@ -71,13 +71,222 @@
     "Check if a number if power of 2 or not":{
         "prefix":"powerof2",
         "body":[
-            
-        ]
+            "bool isPowerof2(int n){",
+                "return (!n&(n-1) && n);",
+            "}"
+        ],
+        "description": "to check if a number is power of 2 or not"
     },
-    "Check if a number if power of 3 or not":{
-        "prefix":"powerof3",
+    "bfs traversal of graph":{
+        "prefix":"bfs",
         "body":[
-            
-        ]
+
+            "void bfsUtil(vector<vector<int>> &adj,int i,int v,int e,vector<bool> &visited)",
+            "{",
+                "queue<int> q;",
+                "q.push(i);",
+                "visited[i]=true;",
+                "cout<<i<<\" \";",
+                "while(!q.empty())",
+                "{",
+                    "int temp=q.front();",
+                    "q.pop();",
+                    "cout<<temp<<\" \";",
+                    "for(auto it=adj[temp].begin();it!=adj[temp].end();it++)",
+                    "{",
+                        "if(visited[*it]==false)",
+                        "{",
+                            "q.push(*it);",
+                            "visited[*it]=true;",
+                        "}",
+                    "}",
+                "}",
+            "}",
+
+            "void bfs(vector<vector<int>> adj,int v,int e)",
+            "{",
+                "vector<bool> visited(v,false);",
+                "for(int i=0;i<v;i++)",
+                "if(!visited[i])",
+                "bfsUtil(adj,i,v,e,visited);",
+            "}"
+        ],
+        "description": "it prints the bfs traversal of the graph if the graph is given in adjacency list."
     },
+
+    "dfs traversal of graph":{
+        "prefix":"dfs",
+        "body": [
+
+            "void dfsUtil(vector<vector<int>> adj,int i,int v,int e)",
+            "{",
+                 "cout<<i<<\" \";",
+                 "visited[i]=true;",
+                 "for(auto it=adj[temp].begin();it!=adj[temp].end();it++)",
+                 "{",
+                     "if(visited[*it]==false)",
+                     "dfsUtil(adj,*it,v,e,visited);",
+                 "}",
+            "}",
+
+            "void dfs(vector<vector<int>> adj,int v,int e)",
+            "{",
+                "vector<bool> visited(v,false);",
+                "for(int i=0;i<v;i++)",
+                "if(!visited[i])",
+                "dfsUtil(adj,i,v,e,visited);",
+            "}"
+        ],
+        "description": "it gives the dfs traversal of the graph provided the graph in adjacency list and the no of vertices and edges"
+    },
+    "Detect Cycle in Undirected":{
+        "prefix":"detectCycleinUndirected",
+        "body": [
+
+            "int findd(vector<int> &parent,int i)",
+            "{",
+                "return parent[i]<0 ? i:parent[i]=findd(parent,parent[i]);",
+            "}",
+
+            "void unionn(vector<int> &parent,int x,int y)",
+            "{",
+                "if(parent[x]>parent[y])",
+                "swap(x,y);",
+                "parent[x]+=parent[y];",
+                "parent[y]=x;",
+            "}",
+
+            "bool findCycle(vector<pair<int,int>> adj,int v,int e)",
+            "{",
+                "vector<int> parent(v,-1);",
+                "for(int i=0;i<e;i++)",
+                "{",
+                    "int x=findd(parent,adj[i].first);",
+                    "int y=findd(parent,adj[i].second);",
+                    "if(x!=y)",
+                    "{",
+                        "unionn(parent,x,y)",
+                    "}",
+                    "else{",
+                        "return 0;",
+                    "}",
+                "}",
+                "return 1;",
+            "}",
+        ],
+        "description": "detect whether the undirected graph contains cycle or not provided the graph as an array of edges (vector of pairs) , vertices, edges"
+    },
+    "Detect Cycle in Directed":{
+        "prefix":"detectCycleinDirected",
+        "body": [
+
+            "bool isCycleUtil(vector<vector<int>> &adj,vector<int> &visited,vector<int> &recStack,int i)",
+            "{",
+                "if(visited[i]==false)",
+                "{",
+                    "visited[i]=true;",
+                    "recStack[i]=true;",
+                    "for(auto it=adj[i].begin();it!=adj[i].end();it++){",
+                        "if(recStack[*it])",
+                        "return true;",
+                        "else if(!visited[*it] && isCycleutil(adj,visited,recStack,*it))",
+                        "return true;",
+                    "}",
+                "}",
+                "recStack[i]=false;",
+                "return false;",
+            "}",
+
+            "bool isCycle(vector<vector<int>> &adj,int v,int e)",
+            "{",
+                "vector<int> visited(v,false);",
+                "vector<int> recStack(v,false);",
+                "for(int i=0;i<v;i++){",
+                    "if(isCycleUtil(adj,visited,recStack,i))",
+                    "return 1;",
+                "}",
+                "return 0;",
+            "}",
+        ],
+        "kruskal minimum spanning tree":{
+            "prefix":"kruskal",
+            "body":[
+                "int findd(vector<int> &parent,int i){",
+                    "return parent[i]<0 ? i:parent[i]=findd(parent,parent[i]);",
+                "}",
+
+                "void unionn(vector<int> &parent,int x,int y)",
+                "{",
+                    "if(parent[x]>parnet[y])",
+                    "swap(x,y);",
+                    "parent[x]+=parnet[y];",
+                    "parnet[y]=x;",
+                "}",
+
+                "int mst(vector<pair<pair<int,int>>> adj,int v,int e){",
+                    "int ans=0;",
+                    "vector<int> parnet(v,-1);",
+                    "sort(adj.begin(),adj.end());",
+                    "for(int i=0;i<e;i++){",
+                        "int from=adj[i].second.first;",
+                        "int to=adj[i].second.second;",
+                        "int w=adj[i].first;",
+                        "int x=findd(parent,from);",
+                        "int y=findd(parent,to);",
+                        "if(x!=y)",
+                        "{",
+                            "ans+=w;",
+                            "unionn(parent,x,y);",
+                        "}",
+                    "}",
+                    "return ans;",
+                "}",
+            ],
+            "desciption":"to find the minimum spanning tree of a graph provided(graph as pair of pair {weight,{from,to}}) ,vertices,edges",
+            "prims minimum spanning tree":{
+                "prefix":"prims",
+                "body":[
+
+                    int findd(vector<bool> &mstSet,vector<int> &dist){
+                        int mini=INT_MAX,vertex;
+                        for(int i=0;i<dist.size();i++){
+                            if(dist[i]<mini && mstSet[i]==false){
+                                mini=dist[i];
+                                vertex=i;
+                            }
+                        }
+                        return vertex;
+                    }
+
+                    int mst(vector<vector<int>> &adj,int v,int e)
+                    {
+                        vector<int> dist(v,INT_MAX);
+                        vector<int> parent(v);
+                        vector<bool> mstSet(v,false);
+                        dist[0]=0;
+                        parent[0]=-1;
+                        
+                        for(int i=0;i<v-1;i++)
+                        {
+                            int vertex=findd(mstSet,dist);
+                            mstSet[vertex]=true;
+                            for(int j=0;j<v;j++){
+                                if(adj[vertex][j]!=0 && mstSet[j]==false && dist[j]>adj[vertex][j])
+                                {
+                                    dist[j]=adj[vertex][j];
+                                    parent[j]=vertex;
+                                }
+                            }
+                        }
+                        int ans=0;
+                        for(int i=1;i<v;i++){
+                            ans+=adj[parent[i]][i];
+                        }
+                        return ans;
+                    }
+                ]
+            }
+        }
+    }
+
 }
