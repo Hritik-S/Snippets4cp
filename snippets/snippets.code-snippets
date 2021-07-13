@@ -207,8 +207,9 @@
                 "}",
                 "return 0;",
             "}",
-        ],
-        "kruskal minimum spanning tree":{
+        ]
+    },
+    "kruskal minimum spanning tree":{
             "prefix":"kruskal",
             "body":[
                 "int findd(vector<int> &parent,int i){",
@@ -243,50 +244,49 @@
                 "}",
             ],
             "desciption":"to find the minimum spanning tree of a graph provided(graph as pair of pair {weight,{from,to}}) ,vertices,edges",
+        },
             "prims minimum spanning tree":{
                 "prefix":"prims",
                 "body":[
 
-                    int findd(vector<bool> &mstSet,vector<int> &dist){
-                        int mini=INT_MAX,vertex;
-                        for(int i=0;i<dist.size();i++){
-                            if(dist[i]<mini && mstSet[i]==false){
-                                mini=dist[i];
-                                vertex=i;
-                            }
-                        }
-                        return vertex;
-                    }
+                    "int findd(vector<bool> &mstSet,vector<int> &dist){",
+                        "int mini=INT_MAX,vertex;",
+                        "for(int i=0;i<dist.size();i++){",
+                            "if(dist[i]<mini && mstSet[i]==false){",
+                                "mini=dist[i];",
+                                "vertex=i;",
+                            "}",
+                        "}",
+                        "return vertex;",
+                    "}",
 
-                    int mst(vector<vector<int>> &adj,int v,int e)
-                    {
-                        vector<int> dist(v,INT_MAX);
-                        vector<int> parent(v);
-                        vector<bool> mstSet(v,false);
-                        dist[0]=0;
-                        parent[0]=-1;
+                    "int mst(vector<vector<int>> &adj,int v,int e)",
+                    "{",
+                        "vector<int> dist(v,INT_MAX);",
+                        "vector<int> parent(v);",
+                        "vector<bool> mstSet(v,false);",
+                        "dist[0]=0;",
+                        "parent[0]=-1;",
                         
-                        for(int i=0;i<v-1;i++)
-                        {
-                            int vertex=findd(mstSet,dist);
-                            mstSet[vertex]=true;
-                            for(int j=0;j<v;j++){
-                                if(adj[vertex][j]!=0 && mstSet[j]==false && dist[j]>adj[vertex][j])
-                                {
-                                    dist[j]=adj[vertex][j];
-                                    parent[j]=vertex;
-                                }
-                            }
-                        }
-                        int ans=0;
-                        for(int i=1;i<v;i++){
-                            ans+=adj[parent[i]][i];
-                        }
-                        return ans;
-                    }
-                ]
+                        "for(int i=0;i<v-1;i++)",
+                        "{",
+                            "int vertex=findd(mstSet,dist);",
+                            "mstSet[vertex]=true;",
+                            "for(int j=0;j<v;j++){",
+                                "if(adj[vertex][j]!=0 && mstSet[j]==false && dist[j]>adj[vertex][j])",
+                                "{",
+                                    "dist[j]=adj[vertex][j];",
+                                    "parent[j]=vertex;",
+                                "}",
+                            "}",
+                        "}",
+                        "int ans=0;",
+                        "for(int i=1;i<v;i++){",
+                            "ans+=adj[parent[i]][i];",
+                        "}",
+                        "return ans;",
+                    "}",
+                ],
+                "description": "to find the minimum spanning tree using prims algo provided (graph as adjacency matrix ,vertices and edges)",
             }
-        }
-    }
-
 }
