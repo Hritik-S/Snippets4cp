@@ -418,8 +418,133 @@
 
                 ],
                 "description": "Sort array using bucket sort",
-            }
+            },
 
 /**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+/** -----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/**                                            Tree Traversals,Algorithms & views                                                                              */
+
+"Inorder Traversal":{
+    "prefix":"inorderTraversal",
+    "body":[
+
+    ],
+    "description": "Inorder Traversal of tree",
+},
+
+"Preorder Traversal":{
+    "prefix":"preorderTraversal",
+    "body":[
+
+    ],
+    "description": "Preorder Traversal of tree",
+},
+"Postorder Traversal":{
+    "prefix":"postorderTraversal",
+    "body":[
+
+    ],
+    "description": "Postorder Traversal of tree",
+},
+"Inorder Traversal Iterative":{
+    "prefix":"inorderTraversalIterative",
+    "body":[
+
+    ],
+    "description": "Inorder Traversal of tree(Iterative)",
+},
+
+"Preorder Traversal Iterative":{
+    "prefix":"preorderTraversalIterative",
+    "body":[
+
+    ],
+    "description": "Preorder Traversal of tree(Iterative)",
+},
+"Postorder Traversal Iterative":{
+    "prefix":"postorderTraversalIterative",
+    "body":[
+
+    ],
+    "description": "Postorder Traversal of tree(Iterative)",
+},
+"Levelorder Traversal ":{
+    "prefix":"levelorderTraversal",
+    "body":[
+
+    ],
+    "description": "levelorder Traversal of tree",
+},
+"Morris Traversal ":{
+    "prefix":"morrisTraversal",
+    "body":[
+
+    ],
+    "description": "morris Traversal of tree",
+},
+"Diagonal Traversal ":{
+    "prefix":"diagonalTraversal",
+    "body":[
+
+    ],
+    "description": "diagonalTraversal of tree",
+},
+"Vertical Width ":{
+    "prefix":"verticalWidth",
+    "body":[
+
+    ],
+    "description": "Vertical Width of tree",
+},
+"Diameter Of Tree ":{
+    "prefix":"diameterOfTree",
+    "body":[
+
+    ],
+    "description": "Diameter Of Tree",
+},
+
+"LCA of binary tree ":{
+    "prefix":"LCA",
+    "body":[
+
+    ],
+    "description": "lowest common ancestor",
+},
+"Top view of binary tree ":{
+    "prefix":"topView",
+    "body":[
+
+    ],
+    "description": "top view of binary tree",
+},
+"left view of binary tree ":{
+    "prefix":"leftView",
+    "body":[
+
+    ],
+    "description": "left view of binary tree",
+},
+"right view of binary tree ":{
+    "prefix":"rightView",
+    "body":[
+
+    ],
+    "description": "right view of binary tree",
+},
+"bottom view of binary tree ":{
+    "prefix":"bottomView",
+    "body":[
+
+    ],
+    "description": "bottom view of binary tree",
 }
+/**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/**                                                                          Stacks                                                                     */
+
+
+/**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+} 
