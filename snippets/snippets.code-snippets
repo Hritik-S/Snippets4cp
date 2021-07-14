@@ -288,5 +288,88 @@
                     "}",
                 ],
                 "description": "to find the minimum spanning tree using prims algo provided (graph as adjacency matrix ,vertices and edges)",
+            },
+/**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/**                                                     Sorting Algorithms                                                */
+            "bubble sort":{
+                "prefix":"bubbleSort",
+                "body":[
+
+                ],
+                "description": "Sort array using bubble sort",
+            },
+
+            "selection sort":{
+                "prefix":"selectionSort",
+                "body":[
+
+                ],
+                "description": "Sort array using selection sort",
+            },
+
+            "Insertion sort":{
+                "prefix":"insertionSort",
+                "body":[
+
+                ],
+                "description": "Sort array using Insertion sort",
+            },
+
+            "Merge sort":{
+                "prefix":"mergeSort",
+                "body":[
+
+                ],
+                "description": "Sort array using Merge sort",
+            },
+
+            "Quick sort":{
+                "prefix":"quickSort",
+                "body":[
+
+                ],
+                "description": "Sort array using Quick sort",
+            },
+
+            "Heap sort":{
+                "prefix":"heapSort",
+                "body":[
+
+                ],
+                "description": "Sort array using Heap sort",
+            },
+            "Quick sort tail optimised":{
+                "prefix":"quickSort(tailOptimised)",
+                "body":[
+
+                ],
+                "description": "Sort array using quick sort(tail optimised)",
+            },
+
+            "Count sort":{
+                "prefix":"countSort",
+                "body":[
+
+                ],
+                "description": "Sort array using Count sort",
+            },
+
+            "Radix sort":{
+                "prefix":"radixSort",
+                "body":[
+
+                ],
+                "description": "Sort array using Radix sort",
+            },
+
+            "Bucket sort":{
+                "prefix":"bucketSort",
+                "body":[
+
+                ],
+                "description": "Sort array using bucket sort",
             }
+
+/**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 }
