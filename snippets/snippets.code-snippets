@@ -289,7 +289,6 @@
                 ],
                 "description": "to find the minimum spanning tree using prims algo provided (graph as adjacency matrix ,vertices and edges)",
             },
-<<<<<<< HEAD
             "finding the shortest path from given source to all nodes":{
                 "prefix":"dijkstra",
                 "body": [
@@ -321,42 +320,40 @@
                     "}",
                 ],
                 "description": ""
-            }
-}
-=======
-/**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
-/**                                                     Sorting Algorithms                                                */
-            "bubble sort":{
-                "prefix":"bubbleSort",
-                "body":[
-                    "void bubbleSort(vector<int> &a){",
-                    "int n=a.size();",
-
-             " for(int i=0;i<n-1;i++)",
-             "{",
-               "  int flag=0;",
-               " for(int j=0;j<n-i-1;j++){",
-               "  if(a[j]>a[j+1]){",
-               "   swap(a[j],a[j+1]);",
-               "  ++flag;",
-             "}",
-
-              "}",
-            "if(flag==0) break;",
-             "}",
-              "for(int i=0;i<a.size();i++){",
-             " cout<<a[i]<<\" \";",
-             "}",
-             "}",
-
-                ],
-                "description": "Sort array using bubble sort",
             },
+            /**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/**                                                     Sorting Algorithms                                                */
+"bubble sort":{
+    "prefix":"bubbleSort",
+    "body":[
+        "void bubbleSort(vector<int> &a){",
+        "int n=a.size();",
 
-            "selection sort":{
-                "prefix":"selectionSort",
-                "body":[
-                    "void selectionSort(vector<int> &a){",
+ " for(int i=0;i<n-1;i++)",
+ "{",
+   "  int flag=0;",
+   " for(int j=0;j<n-i-1;j++){",
+   "  if(a[j]>a[j+1]){",
+   "   swap(a[j],a[j+1]);",
+   "  ++flag;",
+ "}",
+
+  "}",
+"if(flag==0) break;",
+ "}",
+  "for(int i=0;i<a.size();i++){",
+ " cout<<a[i]<<\" \";",
+ "}",
+ "}",
+
+    ],
+    "description": "Sort array using bubble sort",
+},
+
+"selection sort":{
+    "prefix":"selectionSort",
+    "body":[
+        "void selectionSort(vector<int> &a){",
 "    int n=a.size();",
 "    for(int i = 0; i < n; i++){",
 "        int min_ind = i;",    
@@ -373,14 +370,14 @@
 "}",
 
 
-                ],
-                "description": "Sort array using selection sort",
-            },
+    ],
+    "description": "Sort array using selection sort",
+},
 
-            "Insertion sort":{
-                "prefix":"insertionSort",
-                "body":[
-                    "void iSort(vector<int>&a){",
+"Insertion sort":{
+    "prefix":"insertionSort",
+    "body":[
+        "void iSort(vector<int>&a){",
 "   int n=a.size();",
 "   for(int i=1;i<n;i++){",
 "       int key = a[i];",
@@ -396,64 +393,64 @@
 "}",
 "}",
 
-                ],
-                "description": "Sort array using Insertion sort",
-            },
+    ],
+    "description": "Sort array using Insertion sort",
+},
 
-            "Merge sort":{
-                "prefix":"mergeSort",
-                "body":[
+"Merge sort":{
+    "prefix":"mergeSort",
+    "body":[
 
-                ],
-                "description": "Sort array using Merge sort",
-            },
+    ],
+    "description": "Sort array using Merge sort",
+},
 
-            "Quick sort":{
-                "prefix":"quickSort",
-                "body":[
+"Quick sort":{
+    "prefix":"quickSort",
+    "body":[
 
-                ],
-                "description": "Sort array using Quick sort",
-            },
+    ],
+    "description": "Sort array using Quick sort",
+},
 
-            "Heap sort":{
-                "prefix":"heapSort",
-                "body":[
+"Heap sort":{
+    "prefix":"heapSort",
+    "body":[
 
-                ],
-                "description": "Sort array using Heap sort",
-            },
-            "Quick sort tail optimised":{
-                "prefix":"quickSort(tailOptimised)",
-                "body":[
+    ],
+    "description": "Sort array using Heap sort",
+},
+"Quick sort tail optimised":{
+    "prefix":"quickSort(tailOptimised)",
+    "body":[
 
-                ],
-                "description": "Sort array using quick sort(tail optimised)",
-            },
+    ],
+    "description": "Sort array using quick sort(tail optimised)",
+},
 
-            "Count sort":{
-                "prefix":"countSort",
-                "body":[
+"Count sort":{
+    "prefix":"countSort",
+    "body":[
 
-                ],
-                "description": "Sort array using Count sort",
-            },
+    ],
+    "description": "Sort array using Count sort",
+},
 
-            "Radix sort":{
-                "prefix":"radixSort",
-                "body":[
+"Radix sort":{
+    "prefix":"radixSort",
+    "body":[
 
-                ],
-                "description": "Sort array using Radix sort",
-            },
+    ],
+    "description": "Sort array using Radix sort",
+},
 
-            "Bucket sort":{
-                "prefix":"bucketSort",
-                "body":[
+"Bucket sort":{
+    "prefix":"bucketSort",
+    "body":[
 
-                ],
-                "description": "Sort array using bucket sort",
-            },
+    ],
+    "description": "Sort array using bucket sort",
+},
 
 /**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -461,119 +458,119 @@
 /**                                            Tree Traversals,Algorithms & views                                                                              */
 
 "Inorder Traversal":{
-    "prefix":"inorderTraversal",
-    "body":[
+"prefix":"inorderTraversal",
+"body":[
 
-    ],
-    "description": "Inorder Traversal of tree",
+],
+"description": "Inorder Traversal of tree",
 },
 
 "Preorder Traversal":{
-    "prefix":"preorderTraversal",
-    "body":[
+"prefix":"preorderTraversal",
+"body":[
 
-    ],
-    "description": "Preorder Traversal of tree",
+],
+"description": "Preorder Traversal of tree",
 },
 "Postorder Traversal":{
-    "prefix":"postorderTraversal",
-    "body":[
+"prefix":"postorderTraversal",
+"body":[
 
-    ],
-    "description": "Postorder Traversal of tree",
+],
+"description": "Postorder Traversal of tree",
 },
 "Inorder Traversal Iterative":{
-    "prefix":"inorderTraversalIterative",
-    "body":[
+"prefix":"inorderTraversalIterative",
+"body":[
 
-    ],
-    "description": "Inorder Traversal of tree(Iterative)",
+],
+"description": "Inorder Traversal of tree(Iterative)",
 },
 
 "Preorder Traversal Iterative":{
-    "prefix":"preorderTraversalIterative",
-    "body":[
+"prefix":"preorderTraversalIterative",
+"body":[
 
-    ],
-    "description": "Preorder Traversal of tree(Iterative)",
+],
+"description": "Preorder Traversal of tree(Iterative)",
 },
 "Postorder Traversal Iterative":{
-    "prefix":"postorderTraversalIterative",
-    "body":[
+"prefix":"postorderTraversalIterative",
+"body":[
 
-    ],
-    "description": "Postorder Traversal of tree(Iterative)",
+],
+"description": "Postorder Traversal of tree(Iterative)",
 },
 "Levelorder Traversal ":{
-    "prefix":"levelorderTraversal",
-    "body":[
+"prefix":"levelorderTraversal",
+"body":[
 
-    ],
-    "description": "levelorder Traversal of tree",
+],
+"description": "levelorder Traversal of tree",
 },
 "Morris Traversal ":{
-    "prefix":"morrisTraversal",
-    "body":[
+"prefix":"morrisTraversal",
+"body":[
 
-    ],
-    "description": "morris Traversal of tree",
+],
+"description": "morris Traversal of tree",
 },
 "Diagonal Traversal ":{
-    "prefix":"diagonalTraversal",
-    "body":[
+"prefix":"diagonalTraversal",
+"body":[
 
-    ],
-    "description": "diagonalTraversal of tree",
+],
+"description": "diagonalTraversal of tree",
 },
 "Vertical Width ":{
-    "prefix":"verticalWidth",
-    "body":[
+"prefix":"verticalWidth",
+"body":[
 
-    ],
-    "description": "Vertical Width of tree",
+],
+"description": "Vertical Width of tree",
 },
 "Diameter Of Tree ":{
-    "prefix":"diameterOfTree",
-    "body":[
+"prefix":"diameterOfTree",
+"body":[
 
-    ],
-    "description": "Diameter Of Tree",
+],
+"description": "Diameter Of Tree",
 },
 
 "LCA of binary tree ":{
-    "prefix":"LCA",
-    "body":[
+"prefix":"LCA",
+"body":[
 
-    ],
-    "description": "lowest common ancestor",
+],
+"description": "lowest common ancestor",
 },
 "Top view of binary tree ":{
-    "prefix":"topView",
-    "body":[
+"prefix":"topView",
+"body":[
 
-    ],
-    "description": "top view of binary tree",
+],
+"description": "top view of binary tree",
 },
 "left view of binary tree ":{
-    "prefix":"leftView",
-    "body":[
+"prefix":"leftView",
+"body":[
 
-    ],
-    "description": "left view of binary tree",
+],
+"description": "left view of binary tree",
 },
 "right view of binary tree ":{
-    "prefix":"rightView",
-    "body":[
+"prefix":"rightView",
+"body":[
 
-    ],
-    "description": "right view of binary tree",
+],
+"description": "right view of binary tree",
 },
 "bottom view of binary tree ":{
-    "prefix":"bottomView",
-    "body":[
+"prefix":"bottomView",
+"body":[
 
-    ],
-    "description": "bottom view of binary tree",
+],
+"description": "bottom view of binary tree",
 }
 /**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -582,5 +579,7 @@
 
 
 /**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
-} 
->>>>>>> 50c8348519af9c382b671dbf999c742e4f4b3a71
+}
+
+
+            
