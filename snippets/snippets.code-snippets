@@ -1106,6 +1106,14 @@
 "Inorder Traversal":{
 "prefix":"inorderTraversal",
 "body":[
+    "void printInorder(struct node* node)",
+"{",
+ "   if (node == NULL)",
+ "       return;",
+ "   printInorder(node->left);",
+  "  printf(\"%d \", node->data);",
+ "   printInorder(node->right);",
+"}",
 
 ],
 "description": "Inorder Traversal of tree",
@@ -1114,6 +1122,14 @@
 "Preorder Traversal":{
 "prefix":"preorderTraversal",
 "body":[
+    "void printPreorder(struct node* node)",
+"{",
+"    if (node == NULL)",
+ "return;",
+  "  printf(\"%d \", node->data);",
+  "  printPreorder(node->left);",
+ "   printPreorder(node->right);",
+"}",
 
 ],
 "description": "Preorder Traversal of tree",
@@ -1121,6 +1137,14 @@
 "Postorder Traversal":{
 "prefix":"postorderTraversal",
 "body":[
+    "void printPostorder(struct node* node)",
+"{",
+ "   if (node == NULL)",
+ "       return;",
+ "   printPostorder(node->left);",
+ "   printPostorder(node->right);",
+ "   printf(\"%d \", node->data);",
+"}",
 
 ],
 "description": "Postorder Traversal of tree",
@@ -1150,6 +1174,29 @@
 "Levelorder Traversal ":{
 "prefix":"levelorderTraversal",
 "body":[
+    "  vector<vector<int>> levelOrder(TreeNode* node) {",
+    "                 queue<TreeNode*>q;",
+    "     q.push(node);",
+    "      vector<vector<int>>ans;",
+    "    if(node==NULL) return ans;",
+    "     while(!q.empty()){",
+    "         int size=q.size();",
+    "              vector<int>a;",
+    "          for(int i=0;i<size;i++){",
+    "             TreeNode*curr=q.front();",
+     "        q.pop();         ",    
+    "         a.push_back(curr->val);",
+    "         if(curr->left!=NULL){",
+    "             q.push(curr->left);",
+    "         }",
+    "          if(curr->right!=NULL){",
+    "             q.push(curr->right);",
+    "         }",
+    "         }",
+    "            ans.push_back(a); ",
+    "     }",
+    "     return ans;  ",   
+    "  }",
 
 ],
 "description": "levelorder Traversal of tree",
@@ -1157,6 +1204,29 @@
 "Morris Traversal ":{
 "prefix":"morrisTraversal",
 "body":[
+    "  vector<vector<int>> morrisOrder(TreeNode* node) {",
+    "                 queue<TreeNode*>q;",
+    "     q.push(node);",
+    "      vector<vector<int>>ans;",
+    "    if(node==NULL) return ans;",
+    "     while(!q.empty()){",
+    "         int size=q.size();",
+    "              vector<int>a;",
+    "          for(int i=0;i<size;i++){",
+    "             TreeNode*curr=q.front();",
+     "        q.pop();         ",    
+    "         a.push_back(curr->val);",
+    "         if(curr->left!=NULL){",
+    "             q.push(curr->left);",
+    "         }",
+    "          if(curr->right!=NULL){",
+    "             q.push(curr->right);",
+    "         }",
+    "         }",
+    "            ans.push_back(a); ",
+    "     }",
+    "     return ans;  ",   
+    "  }",
 
 ],
 "description": "morris Traversal of tree",
@@ -1171,6 +1241,21 @@
 "Vertical Width ":{
 "prefix":"verticalWidth",
 "body":[
+    "int height(struct node* node)",
+"{",
+  "  if (node==NULL)",
+  "      return 0;",
+  "  else",
+  "  {",
+  "      /* compute the height of each subtree */",
+  "      int lheight = height(node->left);",
+  "      int rheight = height(node->right);",
+  "      /* use the larger one */",
+ "       if (lheight > rheight)",
+  "          return(lheight+1);",
+  "      else return(rheight+1);",
+  "  }",
+"}",
 
 ],
 "description": "Vertical Width of tree",
@@ -1178,6 +1263,22 @@
 "Diameter Of Tree ":{
 "prefix":"diameterOfTree",
 "body":[
+    "int diameter(TreeNode* root,int &ans){",
+    "   if(root==NULL){  ",
+  "         return 0;",
+  "     }",
+  "     int x=diameter(root->left,ans);",
+  "     int y=diameter(root->right,ans);    ",    
+  "     ans=max(ans,x+y+1);",
+ "      return 1+max(x,y);    ",
+ "  }",
+ "  int diameterOfBinaryTree(TreeNode* root) { ",  
+ "      if(root==NULL) return 0;",
+"       int ans=INT_MIN;",
+"       diameter(root,ans);",
+ "      return ans-1;  ",
+ "  }",
+
 
 ],
 "description": "Diameter Of Tree",
@@ -1186,6 +1287,23 @@
 "LCA of binary tree ":{
 "prefix":"LCA",
 "body":[
+    "   TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {",
+    "    if(root==NULL) return NULL;//we can find the LCA",
+    "    if(root->val==p->val || root->val==q->val){",
+    "        return root; //",
+    "    }",
+    "    TreeNode* leftLCA=lowestCommonAncestor(root->left,p,q);",
+   "         TreeNode* rightLCA=lowestCommonAncestor(root->right,p,q);",
+   "     //we have drilled downwards and base cases has pushes upwards ..at this point we have to analyse out return values;",
+   "     if(leftLCA!=NULL && rightLCA!=NULL){",
+   "         return root;",
+   "     }",
+  "      if(leftLCA==NULL){",
+  "          return rightLCA;",
+  "      }",
+  "      else return leftLCA;    ",
+ "   }",
+
 
 ],
 "description": "lowest common ancestor",
@@ -1194,36 +1312,71 @@
 "prefix":"topView",
 "body":[
 
-],
-"description": "top view of binary tree",
-},
-"left view of binary tree ":{
-"prefix":"leftView",
-"body":[
+    "   void topview(Node* root)",
+    "{",
+     "   if (root == NULL)",
+     "       return;",
+     "   queue<Node*> q;",
+     "   map<int, int> m;",
+     "   int hd = 0;",
+     "   root->hd = hd;",
+     "   q.push(root);",
+    "    cout << \"The top view of the tree is : \n\";",
+      "  while (q.size()) {",
+      "      hd = root->hd;",
+      "      if (m.count(hd) == 0)",
+      "          m[hd] = root->data;",
+      "     if (root->left) {",
+      "          root->left->hd = hd - 1;",
+      "          q.push(root->left);",
+      "      }",
+      "      if (root->right) {",
+      "          root->right->hd = hd + 1;",
+      "          q.push(root->right);",
+      "      }",
+     "       q.pop();",
+     "       root = q.front();",
+     "   }",
+     "   for (auto i = m.begin(); i != m.end(); i++) {",
+     "       cout << i->second << \" \";",
+     "   }",
+    "}",
+    
 
 ],
-"description": "left view of binary tree",
+"description": "top view of binary tree",
 },
 "right view of binary tree ":{
 "prefix":"rightView",
 "body":[
+    "vector<int> rightSideView(TreeNode* root) {",
+  "      if(root==NULL){",
+   "         vector<int> b;",
+    "        return b;",
+    "    }",
+    "    vector<int>a;",
+    "    queue<TreeNode*> q;",
+    "    q.push(root);",
+    "    while(!q.empty()){",
+   "       //  TreeNode*curr=q.front();",
+    "        a.push_back(q.back()->val);",
+    "        int temp=q.size();",
+    "        for(int i=0;i<temp;i++){",
+    "            TreeNode*curr=q.front();",
+    "           q.pop();",
+     "           cout<<curr->val<<endl;",
+    "            if(curr->left!=NULL)",
+    "                q.push(curr->left);",
+    "            if(curr->right!=NULL)",
+   "                 q.push(curr->right);",
+   "         }   ",
+  "      }",
+   "     return a; ",   
+   " }",
 
 ],
 "description": "right view of binary tree",
-},
-"bottom view of binary tree ":{
-"prefix":"bottomView",
-"body":[
-
-],
-"description": "bottom view of binary tree",
 }
-/**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
-/**                                                                          Stacks                                                                     */
-
-
 /**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 }
 
