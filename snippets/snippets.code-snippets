@@ -582,6 +582,259 @@
                 "description": ""
             },
 
+
+            /** ----------------------------Linked List----------------------------------------------*/
+
+            "template for linked list":{
+                "prefix":"template",
+                "body": [
+                    "struct Node",
+                    "{",
+                        "public:",
+                        "int data;",
+                        "Node *next;",
+                        "Node(int x)",
+                        "{",
+                            "data=x;",
+                            "next=NULL;",
+                        "}",
+                    "}",
+                ],
+                "description": ""
+            },
+
+            "add at end of linked list":{
+                "prefix":"addAtEnd",
+                "body": [
+                    "Node *addAtEnd(Struct Node *head,int num)",
+                    "{",
+                        "Node *node=new Node(num);",
+                        "if(head==NULL)",
+                        "{",
+                            "head=node;",
+                            "return head;",
+                        "}",
+
+                        "Node *curr=head;",
+                        "while(curr->next!=NULL)",
+                        "curr=curr->next;",
+                        "cur->next=head;",
+
+                        "return head;",
+                    "}",
+                ],
+                "description": ""
+            },
+
+            "add at front of linked list":{
+                "prefix": "addAtFront",
+                "body": [
+                    "Node *addAtFront(struct Node *head,int num)",
+            "{",
+                "Node *node=new Node(num);",
+                "node->next=head;",
+                "head=node;",
+                "return head ;",
+            "}",
+                ],
+                "description": ""
+            },
+
+            "add at specific position of linked list":{
+                "prefix":"addAtPos",
+                "body": [
+                    "Node *insertatPos(Node *head,int pos,int n)",
+"{",
+    "Node *node=new Node(n);",
+    "if(pos==1)",
+    "{",
+        "node->next=head;",
+        "head=node;",
+        "return head;",
+    "}",
+    
+    "Node *curr=head;",
+    "for(int i=1;i<=pos-2;i++)",
+    "{",
+        "curr=curr->next;",
+    "}",
+
+    "node->next=curr;",
+    "curr->next=node;",
+
+    "return head;",
+"}",
+                ],
+                "description": ""
+            },
+
+            "delete the linked list of given value":{
+                "prefix": "deleteAtKey",
+                "body": [
+                    "Node *deleteKey(Node *head,int key)",
+"{",
+    "Node *curr=head;",
+
+    "if(curr->data==key)",
+    "{",
+        "curr=curr->next;",
+        "head=curr;",
+        "return head;",
+    "}",
+
+    "Node *prev=NULL;",
+    "while(curr!=NULL && curr->data!=key)",
+    "{",
+        "prev=curr;",
+        "curr=curr->next;",
+    "}",
+    "if(curr==NULL) {",
+        "cout<<\"Key Not Found\"<<endl;",
+        "return head;",
+    "}",
+    "prev->next=curr->next;",
+
+    "return head;",
+"}",
+                ],
+                "description": ""
+            },
+
+            "delete at specific position of linked list":{
+                "prefix": "deleteAtPos",
+                "body": [
+                    "Node *deletePos(Node *head,int pos)",
+"{",
+    "Node *curr=head;",
+    "if(pos==1)",
+    "{",
+        "curr=curr->next;",
+        "head=curr;",
+        "return head;",
+    "}",
+
+    "Node *prev=head;",
+
+    "for(int i=1;i<=pos-1;i++)",
+    "{",
+        "prev=curr;",
+        "curr=curr->next;",
+    "}",
+
+     "prev->next=curr->next;",
+
+     "return head;",  
+ 
+"}",
+                ],
+                "description": ""
+            },
+
+            "length of linked list":{
+                "prefix": "length",
+                "body": [
+                    "int length(Node *head)",
+"{",
+    "Node *curr=head;",
+    "int cnt=0;",
+    "while(curr!=NULL)",
+    "{",
+        "cnt++;",
+        "curr=curr->next;",
+    "}",
+    "return cnt;",
+"}",
+                ],
+                "description": ""
+            },
+
+            "search a particular element in a linked list":{
+                "prefix": "search",
+                "body": [
+                    "int search(Node *head,int key)",
+"{",
+    "if(head==NULL)",
+    "return -1;",
+
+    "Node *curr=head;",
+    "int indx=1;",
+    "while(curr->data!=key){",
+        "curr=curr->next;",
+        "indx++;",
+    "}",
+    "if(curr==NULL) return -1;",
+    "return indx;",
+"}",
+                ],
+                "description": ""
+            },
+
+            "print linked List":{
+                "prefix": "print",
+                "body": [
+                    "void printList(Node *head)",
+"{",
+    "Node *tmp=head;",
+    "if(!tmp) cout<<\"o\"<<endl;",
+    "while(tmp!=NULL)",
+    "{",
+        "cout<<tmp->data<<\" \";",
+        "tmp=tmp->next;",
+    "}",
+    "cout<<endl;",
+    "return ;",
+"}",
+                ],
+                "description": ""
+            },
+
+            "to print the Nth node from the start":{
+                "prefix": "nthfromStart",
+                "body": [
+                    "int NthNodeStart(Node *head,int n)",
+"{",
+    "int indx=1;",
+    "Node *curr=head;",
+    "while(indx!=n)",
+    "{",
+        "curr=curr->next;",
+        "indx++;",
+    "}",
+    "return curr->data;",
+"}",
+                ],
+                "description": ""
+            },
+
+            "to print the Nth node from the end":{
+                "prefix": "nthfromEnd",
+                "body": [
+                    "int NthNodeEnd(Node *head,int n)",
+"{",
+    "Node *curr=head;",
+    "int len=0;",
+    "while(curr!=NULL)",
+    "{",
+        "curr=curr->next;",
+        "len++;",
+    "}",
+    "if(n>len) return -1;",
+    "curr=head;int indx=1;",
+    "while(indx!=(n-len+1))",
+    "{",
+        "indx++;curr=curr->next;",
+    "}",
+
+    "return curr->data;",
+"}",
+                ],
+                "description": ""
+            },
+
+            
+
+            
+
             /**-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /**                                                     Sorting Algorithms                                                */
 "bubble sort":{
