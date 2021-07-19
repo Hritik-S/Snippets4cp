@@ -4,7 +4,7 @@ Code **snippets** are great additions to anyone who wants to save time while Cod
 ### How to use
 
 Type the below Prefixes to get your required Code Snippet.
-
+![ezgif com-gif-maker1](https://user-images.githubusercontent.com/57672513/126140975-3bf8d3a7-cfcd-4819-b010-da7d59962da5.gif)
 ### Install instructions
 
 Install via Extension Marketplace
