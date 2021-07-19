@@ -1,9 +1,9 @@
 # Snippets4cp
-Code snippets are great additions to anyone who wants to save time while Coding. They make it easier to write Algorithms,repeating code, such as loops, or reusable methods in competitive programming competitions.
+Code **snippets** are great additions to anyone who wants to save time while Coding. They make it **easier** to write Algorithms,repeating code, such as loops, or reusable methods in **competitive programming competitions**.
 
 ### How to use
 
-Type the below commands to get the snippet
+Type the below Prefixes to get your required Code Snippet.
 
 ### Install instructions
 
